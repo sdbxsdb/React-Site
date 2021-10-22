@@ -3,13 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import JanuaryPage from './pages/January';
 import FebuaryPage from './pages/Febuary';
 import MarchPage from './pages/March';
-import MainNav from './components/layout/MainNav';
+import Layout from './components/layout/Layout'
+
 
 function App() {
   return (
 
-    <div>
-      <MainNav />
+    <Layout>
       <Switch>
         <Route path="/" exact >
           <JanuaryPage />
@@ -24,7 +24,7 @@ function App() {
         </Route>
       </Switch>
 
-    </div>
+    </Layout>
 
   );
 }
