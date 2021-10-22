@@ -1,9 +1,7 @@
 import { Route, Switch } from 'react-router-dom';
 
 import AllItemsPage from './pages/AllItems';
-import JanuaryPage from './pages/January';
-import FebuaryPage from './pages/Febuary';
-import MarchPage from './pages/March';
+import DonePage from './pages/Done';
 import NewCalanderItem from './pages/NewCalanderItem';
 import Layout from './components/layout/Layout'
 
@@ -17,16 +15,8 @@ function App() {
           <AllItemsPage />
         </Route>
   
-        <Route path="/jan" >
-          <JanuaryPage />
-        </Route>
-
-        <Route path="/feb" >
-          <FebuaryPage />
-        </Route>
-  
-        <Route path="/march" >
-          <MarchPage />
+        <Route path="/done" >
+          <DonePage />
         </Route>
 
         <Route path="/new-item" >

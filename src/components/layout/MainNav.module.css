@@ -4,13 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #E5E5E5;
+  background-color: #191919;
   padding: 10px 10%;
 }
 
 .logo {
   font-size: 2rem;
-  color: white;
+  color: #FCFCFC;
   font-weight: bold;
 }
 
@@ -19,25 +19,19 @@
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .header li {
   margin-left: 3rem;
-  width: 100px;
-  height: 100px;
-  padding: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1C4F8F;
-  border-radius: 100%;
 }
 
 .header a {
   text-decoration: none;
   font-size: 20px;
-  color: white;
+  color: #FCFCFC;
 }
 
 .header a:hover,

@@ -14,7 +14,7 @@ function CalanderItem(props) {
             <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button >To Favorites</button>
+          <button>Complete</button>
         </div>
       </Card>
     </li>
