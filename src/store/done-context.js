@@ -3,33 +3,33 @@ import { createContext, useState } from 'react';
 const DoneContext = createContext({
   done: [],
   totalDone: 0,
-  makeDone: (doneItem) => {},
-  makeUnDone: (itemId) => {},
-  itemIsDone: (itemId) => {},
+  makeDone: (calanderDoneItem) => {},
+  makeUnDone: (calanderItemId) => {},
+  itemIsDone: (calanderItemIditemId) => {},
 });
 
 export function DoneContextProvider(props) {
-  const [userItemsDone, setUserItemsDone] = useState([]);
+  const [userCalanderItemsDone, setUserCalanderItemsDone] = useState([]);
 
-  function makeDoneHandler(doneItem) {
-    setUserItemsDone((prevUserItemsDone) => {
-      return prevUserItemsDone.concat(doneItem);
+  function makeDoneHandler(calanderDoneItem) {
+    setUserCalanderItemsDone((prevUserCalanderItemsDone) => {
+      return prevUserCalanderItemsDone.concat(calanderDoneItem);
     });
   }
 
-  function makeUnDoneHandler(itemId) {
-    setUserItemsDone(prevUserItemsDone => {
-      return prevUserItemsDone.filter(item => item.id !== itemId);
+  function makeUnDoneHandler(calanderItemId) {
+    setUserCalanderItemsDone(prevUserCalanderItemsDone => {
+      return prevUserCalanderItemsDone.filter(calanderItem => calanderItem.id !== calanderItemId);
     })
   }
 
-  function itemIsDoneHandler(itemId) {
-    return userItemsDone.some(item => item.id === itemId);
+  function itemIsDoneHandler(calanderItemId) {
+    return userCalanderItemsDone.some(calanderItem => calanderItem.id === calanderItemId);
   }
 
   const context = {
-    done: userItemsDone,
-    totalDone: userItemsDone.length,
+    done: userCalanderItemsDone,
+    totalDone: userCalanderItemsDone.length,
     makeDone: makeDoneHandler,
     makeUnDone: makeUnDoneHandler,
     itemIsDone: itemIsDoneHandler
