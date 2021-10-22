@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import Card from '../ui/Card';
 import classes from './NewCalanderItemForm.module.css'
 
-function NewCalanderItemForm() {
+function NewCalanderItemForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const locationInputRef = useRef();
@@ -24,7 +24,7 @@ function NewCalanderItemForm() {
       description: enteredDescription,
     }
 
-    console.log(itemData);
+    props.onAddCalanderItem(itemData);
   }
 
   return (
