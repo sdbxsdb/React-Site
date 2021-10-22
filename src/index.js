@@ -4,12 +4,17 @@ import { BrowserRouter } from 'react-router-dom'
 
 import './index.css';
 import App from './App';
+import { DoneContextProvider } from './store/done-context'
+
 
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>, 
+
+    <DoneContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </DoneContextProvider>, 
   document.getElementById('root')
 
 );

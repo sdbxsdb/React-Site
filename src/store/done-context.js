@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react';
 
 const DoneContext = createContext({
   done: [],
@@ -8,17 +8,17 @@ const DoneContext = createContext({
   itemIsDone: (itemId) => {},
 });
 
-function DoneContextProvider(props) {
+export function DoneContextProvider(props) {
   const [userItemsDone, setUserItemsDone] = useState([]);
 
   function makeDoneHandler(doneItem) {
-    setItemsDone((prevUserItemsDone) => {
+    setUserItemsDone((prevUserItemsDone) => {
       return prevUserItemsDone.concat(doneItem);
     });
   }
 
   function makeUnDoneHandler(itemId) {
-    setItemsDone(prevUserItemsDone => {
+    setUserItemsDone(prevUserItemsDone => {
       return prevUserItemsDone.filter(item => item.id !== itemId);
     })
   }
@@ -38,7 +38,9 @@ function DoneContextProvider(props) {
 
   return (
   <DoneContext.Provider value={context}>
-    {props.childern}
+    {props.children}
   </DoneContext.Provider>
   )
 }
+
+export default DoneContext;

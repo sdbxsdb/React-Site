@@ -4,14 +4,14 @@ import classes from './CalanderList.module.css';
 function CalanderList(props) {
   return (
     <ul className={classes.list}>
-      {props.calanderItems.map((calanderItem) => (
+      {props.calanderItems.map((item) => (
         <CalanderItem 
-          key={calanderItem.id} 
-          id={calanderItem.id} 
-          image={calanderItem.image} 
-          title={calanderItem.title} 
-          address={calanderItem.address} 
-          description={calanderItem.description} 
+          key={item.id} 
+          id={item.id} 
+          image={item.image} 
+          title={item.title} 
+          address={item.address} 
+          description={item.description} 
         />
         ))}
     </ul>

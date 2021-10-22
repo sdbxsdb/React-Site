@@ -13,10 +13,10 @@ function MainNav() {
           <Link to='/'>All</Link>
         </li>
         <li>
-          <Link to='/new-item'>New</Link>
+          <Link to='/done'>Done</Link>
         </li>
         <li>
-          <Link to='/done'>Done</Link>
+          <Link to='/new-item'>New</Link>
         </li>
       </ul>
     </nav>

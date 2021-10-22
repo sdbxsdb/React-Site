@@ -1,7 +1,30 @@
+import { useContext } from 'react'
+
 import Card from '../ui/Card';
 import classes from './CalanderItem.module.css'
+import DoneContext from '../../store/done-context'
 
 function CalanderItem(props) {
+  const doneCtx = useContext(DoneContext);
+
+  const itemIsDone = doneCtx.itemIsDone(props.id)
+
+  function toggleDoneStatusHandler() {
+
+    
+    if (itemIsDone) {
+      doneCtx.makeUnDone(props.id);
+    } else {
+      doneCtx.makeDone({
+        id: props.id,
+        title: props.title,
+        description: props.description,
+        location: props.location,
+        image: props.image,
+      })
+    }
+  }
+
   return (
     <li className={classes.item}>
       <Card>
@@ -14,7 +37,9 @@ function CalanderItem(props) {
             <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button>Complete</button>
+          <button onClick={toggleDoneStatusHandler}>
+            {itemIsDone ? 'Remove from Done' : 'Add to Done'}
+          </button>
         </div>
       </Card>
     </li>
