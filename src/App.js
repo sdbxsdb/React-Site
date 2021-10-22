@@ -1,5 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 
+import AllItemsPage from './pages/AllItems';
 import JanuaryPage from './pages/January';
 import FebuaryPage from './pages/Febuary';
 import MarchPage from './pages/March';
@@ -13,9 +14,13 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/" exact >
-          <JanuaryPage />
+          <AllItemsPage />
         </Route>
   
+        <Route path="/jan" >
+          <JanuaryPage />
+        </Route>
+
         <Route path="/feb" >
           <FebuaryPage />
         </Route>

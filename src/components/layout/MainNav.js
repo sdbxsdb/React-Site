@@ -10,7 +10,13 @@ function MainNav() {
     <nav>
       <ul>
         <li>
-          <Link to='/'>Jan</Link>
+          <Link to='/'>All</Link>
+        </li>
+        <li>
+          <Link to='/new-item'>New</Link>
+        </li>
+        <li>
+          <Link to='/jan'>Jan</Link>
         </li>
         <li>
           <Link to='/feb'>Feb</Link>
@@ -18,9 +24,7 @@ function MainNav() {
         <li>
           <Link to='/march'>March</Link>
         </li>
-        <li>
-          <Link to='/new-item'>New</Link>
-        </li>
+        
       </ul>
     </nav>
   </header>)

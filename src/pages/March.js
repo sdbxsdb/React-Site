@@ -1,5 +1,9 @@
 function MarchPage() {
-  return <div>March Page</div>;
+  return (
+    <section>
+      <h1>March Page</h1>
+    </section>
+  );
 }
 
 export default MarchPage;
