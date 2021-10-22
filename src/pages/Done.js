@@ -6,10 +6,18 @@ import CalanderList from '../components/calander/CalanderList'
 function DonePage() {
   const doneCtx = useContext(DoneContext);
 
+  let content;
+
+  if (doneCtx.totalDone === 0) {
+    content = <p>You've don't nothing... Get your shit together</p>
+  } else {
+    content = <CalanderList calanderItems={doneCtx.done} />
+  }
+
   return (
     <section>
       <h1>Done</h1>
-      <CalanderList calanderItems={doneCtx.done} />
+      {content} 
     </section>
     );
 }
