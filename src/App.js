@@ -1,24 +1,26 @@
 import { Route, Switch } from 'react-router-dom';
 
-import AllMeetupsPage from './pages/AllMeetups';
-import NewMeetupPage from './pages/NewMeetup';
-import FavMeetupsPage from './pages/FavMeetups';
+import JanuaryPage from './pages/January';
+import FebuaryPage from './pages/Febuary';
+import MarchPage from './pages/March';
+import MainNav from './components/layout/MainNav';
 
 function App() {
   return (
 
     <div>
+      <MainNav />
       <Switch>
         <Route path="/" exact >
-          <AllMeetupsPage />
+          <JanuaryPage />
         </Route>
   
-        <Route path="/new-meetup" >
-          <NewMeetupPage />
+        <Route path="/feb" >
+          <FebuaryPage />
         </Route>
   
-        <Route path="/fav-meetups" >
-          <FavMeetupsPage />
+        <Route path="/march" >
+          <MarchPage />
         </Route>
       </Switch>
 
