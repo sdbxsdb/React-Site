@@ -6,7 +6,7 @@ import classes from './MainNav.module.css';
 function MainNav() {
   return (
   <header className={classes.header}>
-    <div className={classes.logo}>1921 Day By Day</div>
+    <div className={classes.logo}>My Calendar</div>
     <nav>
       <ul>
         <li>
