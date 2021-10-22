@@ -1,7 +1,7 @@
 import Card from '../ui/Card';
-import classes from './TimelineItem.module.css'
+import classes from './CalanderItem.module.css'
 
-function TimelineItem(props) {
+function CalanderItem(props) {
   return (
     <li className={classes.item}>
       <Card>
@@ -22,4 +22,4 @@ function TimelineItem(props) {
 }
 
 
-export default TimelineItem;
+export default CalanderItem;

@@ -1,4 +1,4 @@
-import TimelineList from '../components/timeline/TimelineList';
+import CalanderList from '../components/calander/CalanderList';
 
 const DUMMY_DATA = [
   {
@@ -25,7 +25,7 @@ function JanuaryPage() {
   return (
     <section>
       <h1>January Page</h1>
-        <TimelineList timelineItems={DUMMY_DATA} />
+        <CalanderList calanderItems={DUMMY_DATA} />
     </section>
     );
 }

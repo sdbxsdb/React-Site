@@ -18,6 +18,9 @@ function MainNav() {
         <li>
           <Link to='/march'>March</Link>
         </li>
+        <li>
+          <Link to='/new-item'>New</Link>
+        </li>
       </ul>
     </nav>
   </header>)
